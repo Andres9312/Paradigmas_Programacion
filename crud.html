@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos - DevBotts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-management-container">
+        <h2>Gestión de Productos</h2>
+
+        <form action="crud.php" method="post">
+            <label for="add-product">Agregar Producto</label>
+            <input type="text" id="add-product" name="add-product" placeholder="Nombre del Producto" required>
+            <input type="hidden" name="action" value="add">
+            <button type="submit">Agregar</button>
+        </form>
+        
+        <form action="crud.php" method="post">
+            <label for="update-product">Actualizar Producto</label>
+            <input type="text" id="update-product" name="update-product" placeholder="Nombre del Producto" required>
+            <input type="text" id="update-id" name="update-id" placeholder="ID del Producto" required>
+            <input type="hidden" name="action" value="update">
+            <button type="submit">Actualizar</button>
+        </form>
+        
+        <form action="crud.php" method="post">
+            <label for="delete-product">Eliminar Producto</label>
+            <input type="text" id="delete-product" name="delete-product" placeholder="Nombre del Producto" required>
+            <input type="hidden" name="action" value="delete">
+            <button type="submit">Eliminar</button>
+        </form>
+
+        <form action="crud.php" method="post">
+            <label for="view-id">Ver Producto</label>
+            <input type="text" id="view-id" name="view-id" placeholder="ID del Producto" required>
+            <input type="hidden" name="action" value="view">
+            <button type="submit">Ver</button>
+        </form>
+
+    </div>
+</body>
+</html>
